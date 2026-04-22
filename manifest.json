@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Ticket AI Copilot",
+  "version": "1.0",
+  "description": "Summarize tickets and generate action steps",
+  
+  "permissions": ["activeTab", "scripting"],
+
+  "host_permissions": [
+    "*://*.atlassian.net/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.atlassian.net/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
