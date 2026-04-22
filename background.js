@@ -9,7 +9,7 @@ Analyze the following ticket and provide:
 
 1. Problem Summary (1-2 lines)
 2. Likely Cause
-3. Step-by-step Fix (clear and actionable)
+3. Step-by-step Workflow
 
 Ticket:
 Title: ${title}
@@ -17,7 +17,7 @@ Description: ${description}
 `;
 
     fetch(
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=YOUR_GEMINI_API_KEY",
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent?key=YOUR_GEMINI_API_KEY",
       {
         method: "POST",
         headers: {
