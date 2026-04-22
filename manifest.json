@@ -4,14 +4,17 @@
   "version": "1.0",
   "description": "Summarize tickets and generate action steps",
   
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["activeTab", "scripting", "storage"],
+
+  "options_page": "options.html",
 
   "host_permissions": [
     "*://*.atlassian.net/*"
   ],
 
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
 
   "action": {
