@@ -1,4 +1,4 @@
-const DEFAULT_BACKEND_URL = "https://ticket-summarizer-extension.onrender.com";
+const DEFAULT_BACKEND_URL = "https://ticket-summarizer-extension.onrender.com/api/analyze";
 
 chrome.runtime.onMessage.addListener((req, sender, sendResponse) => {
   if (req.type === "PROCESS_TICKET") {
